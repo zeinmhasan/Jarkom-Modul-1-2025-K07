@@ -326,7 +326,7 @@ nanti hasilnya akan seperti ini :
 <img width="832" height="231" alt="Image" src="https://github.com/user-attachments/assets/d6a8d422-fbb9-4d52-bb79-bb8a8a41b95e" />
 
 ## Untuk SOAL 14-20 Langkah Setup-nya Sama
-- Setup decoder: Buka terminal, jalankan nc 10.15.43.32 <port>.
+- Setup decoder: Buka terminal, jalankan nc 10.15.43.32 <port_sesuai_soal>.
 - Setup wireshark: Download file soal, unzip, lalu buka file dengan wireshark.
 
 ## SOAL 14
@@ -334,13 +334,22 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 (link file) nc 10.15.43.32 3401
 
 - How many packets are recorded in the pcapng file?
-  <br> Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx.
+  <br>Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
+ <br><img width="896" height="249" alt="image" src="https://github.com/user-attachments/assets/4e9445c7-00bb-4c97-b259-cb592c15aaf0" />
+
 - What are the user that successfully logged in?
-  Dengan menggunakan filter, saring packet dengan:
+  <br> Dengan menggunakan filter, saring packet dengan:
   ```
   frame contains "successful"
   ```
-  filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil log in.
+  <br>Filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil login. Cara melihat datanya ialah dengan klik kanan packet, lalu pilih follow->tcp stream.
+  <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
+- In which stream were the credentials found?
+  <br>Setelah follow tcp stream di packet tadi, filter akan otomatis berubah menjadi:
+  ```
+  tcp.stream eq 41824
+  ```
+  <br>Menandakan lokasi stream dimana kredensial ditemukan: <strong>41824<strong>
 
 <img width="1019" height="530" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
