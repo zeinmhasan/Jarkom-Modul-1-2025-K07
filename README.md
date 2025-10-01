@@ -533,14 +533,20 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
 <img width="1156" height="808" alt="image" src="https://github.com/user-attachments/assets/4aa90764-cab8-48b0-8981-8e4ab976578a" />
 
 ## Soal 17
+Manwe membuat halaman web di node-nya yang menampilkan gambar cincin agung. Melkor yang melihat web tersebut merasa iri sehingga ia meletakkan file berbahaya agar web tersebut dapat dianggap menyebarkan malware oleh Eru. Analisis file capture untuk menggagalkan rencana Melkor dan menyelamatkan web Manwe. (link file) nc 10.15.43.32 3404
 
-
+#### A. What is the name of the first suspicious file?
 <img width="1294" height="423" alt="image" src="https://github.com/user-attachments/assets/74fabf44-2420-48a9-83cf-15cb6728e42c" />
 
+<img width="1136" height="861" alt="image" src="https://github.com/user-attachments/assets/e99e3bad-202b-4589-a22a-c4a1ecce2d7a" />
+
+#### B. What is the name of the second suspicious file?
+
+#### C. What is the hash of the second suspicious file (knr.exe)?
 
 
-## Soal 17
-Manwe membuat halaman web di node-nya yang menampilkan gambar cincin agung. Melkor yang melihat web tersebut merasa iri sehingga ia meletakkan file berbahaya agar web tersebut dapat dianggap menyebarkan malware oleh Eru. Analisis file capture untuk menggagalkan rencana Melkor dan menyelamatkan web Manwe. (link file) nc 10.15.43.32 3404
+## Soal 18
+
 
 #### A. 
 
