@@ -330,34 +330,33 @@ nanti hasilnya akan seperti ini :
 - Setup wireshark: Download file soal, unzip, lalu buka file dengan wireshark.
 
 ## SOAL 14
-Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. 
-(link file) nc 10.15.43.32 3401
+Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. (link file) nc 10.15.43.32 3401
 
-#### How many packets are recorded in the pcapng file?
+#### A. How many packets are recorded in the pcapng file?
   Jawaban: **500358**
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
 <br><img width="976/2" height="408/2" alt="image" src="https://github.com/user-attachments/assets/62aa579c-5819-4fb3-b732-992e1f7d88d3" />
  
-### What are the user that successfully logged in?
+### B. What are the user that successfully logged in?
   Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
   <br>How: Dengan menggunakan filter, saring packet dengan:
   ```
   frame contains "successful"
   ```
-  <br>Filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil login. Cara melihat datanya ialah dengan klik kanan packet, lalu pilih follow->tcp stream.
+  <br>Filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil login. Cara melihat datanya ialah dengan klik kanan packet, lalu pilih Follow->TCP Stream.
  <br><img width="535" height="262" alt="image" src="https://github.com/user-attachments/assets/3a7eaec1-0fca-47e2-9e76-e07bf1dbc2c5" />
-<img width="504" height="309" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
+<img width="470" height="285" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
   
-### In which stream were the credentials found?
+### C. In which stream were the credentials found?
   Jawaban: **41824**
-  <br>Setelah follow tcp stream di packet tadi, filter akan otomatis berubah menjadi:
+  <br>Setelah Follow TCP Stream di packet tadi, filter akan otomatis berubah menjadi:
   ```
   tcp.stream eq 41824
   ```
   <br>Menandakan lokasi stream dimana kredensial ditemukan: 41824
 
 
-### What tools are used for brute force?
+### D. What tools are used for brute force?
   Jawaban: **Fuzz Faster U Fool v2.1.0-dev**
   <br>Tools biasanya tertera pada User-Agent di kredensial tadi, kebetulan User-Agent juga sesuai dengan format jawaban yang diminta soal.
   <br><img width="504" height="309" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
@@ -366,3 +365,36 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 <img width="1019" height="530" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
 
+## Soal 15
+Melkor menyusup ke ruang server dan memasang keyboard USB berbahaya pada node Manwe. Buka file capture dan identifikasi pesan atau ketikan (keystrokes) yang berhasil dicuri oleh Melkor untuk menemukan password rahasia. (link file) nc 10.15.43.32 3402
+
+#### A. What device does Melkor use?
+  Jawaban: **Keyboard**
+  <br>Setelah mengecek beberapa isi packet, saya menemukan string dengan nama "U" dan "USB Keyboard". Ketika saya input keduanya sebagai jawaban, ternyata salah. Lalu saya coba "Keyboard" saja dan ternyata berhasil.
+  <br><img width="765" height="306" alt="image" src="https://github.com/user-attachments/assets/e87ba9c9-90a6-4b44-bc71-3d61730ab195" />
+
+#### B. What did Melkor write?
+  Jawaban: **UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=**
+  <br>Seperti mencari kredensial di nomor 14, saya coba cari packet dengan protokol TCP. Saya menemukan 1 packet dengan warna merah yang ternyata memiliki kredensial tersebut. Saya menemukan 2 packet warna merah lain namun isinya tidak menjawab permintaan soal. Cara ceknya dengan Follow TCP Stream.
+  <img width="1064" height="458" alt="image" src="https://github.com/user-attachments/assets/8a21fb5d-0069-4d58-a82c-bfccd56af786" />
+
+#### C. What is Melkor's secret message?
+  Jawaban: **Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd**
+  <br>String "UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=" dapat didecode menggunakan cyberchef, menghasilkan: Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd
+  <br><img width="511" height="199" alt="image" src="https://github.com/user-attachments/assets/91640210-c375-4600-a207-de2a5b642d4a" />
+
+
+
+#### Screenshot Pengerjaan di Terminal
+<img width="1096" height="443" alt="image" src="https://github.com/user-attachments/assets/5276d755-a6a8-4bd0-8a45-77576cbef6dc" />
+
+## Soal 16
+Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari file capture yang ada, identifikasi file apa yang diletakkan oleh Melkor. (link file) nc 10.15.43.32 3403
+
+#### A. What credential did the attacker use to log in?
+  Jawaban: **ind@psg420.com:{6r_6e#TfT1p**
+  <br>
+
+
+
+  
