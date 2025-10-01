@@ -333,12 +333,12 @@ nanti hasilnya akan seperti ini :
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. (link file) nc 10.15.43.32 3401
 
 #### A. How many packets are recorded in the pcapng file?
-  Jawaban: **500358**
+  - Jawaban: **500358**
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
 <br><img width="486" height="204" alt="image" src="https://github.com/user-attachments/assets/62aa579c-5819-4fb3-b732-992e1f7d88d3" />
  
 ### B. What are the user that successfully logged in?
-  Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
+  - Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
   <br>How: Dengan menggunakan filter, saring packet dengan:
   ```
   frame contains "successful"
@@ -348,7 +348,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 <img width="470" height="285" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
   
 ### C. In which stream were the credentials found?
-  Jawaban: **41824**
+  - Jawaban: **41824**
   <br>Setelah Follow TCP Stream di packet tadi, filter akan otomatis berubah menjadi:
   ```
   tcp.stream eq 41824
@@ -357,7 +357,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 
 
 ### D. What tools are used for brute force?
-  Jawaban: **Fuzz Faster U Fool v2.1.0-dev**
+  - Jawaban: **Fuzz Faster U Fool v2.1.0-dev**
   <br>Tools biasanya tertera pada User-Agent di kredensial tadi, kebetulan User-Agent juga sesuai dengan format jawaban yang diminta soal.
   <br><img width="504" height="309" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
@@ -369,7 +369,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 Melkor menyusup ke ruang server dan memasang keyboard USB berbahaya pada node Manwe. Buka file capture dan identifikasi pesan atau ketikan (keystrokes) yang berhasil dicuri oleh Melkor untuk menemukan password rahasia. (link file) nc 10.15.43.32 3402
 
 #### A. What device does Melkor use?
-  Jawaban: **Keyboard**
+  - Jawaban: **Keyboard**
   <br>Setelah mengecek beberapa isi packet, saya menemukan string dengan nama "U" dan "USB Keyboard". Ketika saya input keduanya sebagai jawaban, ternyata salah. Lalu saya coba "Keyboard" saja dan ternyata berhasil.
   <br><img width="765" height="306" alt="image" src="https://github.com/user-attachments/assets/e87ba9c9-90a6-4b44-bc71-3d61730ab195" />
 
