@@ -336,7 +336,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 #### How many packets are recorded in the pcapng file?
   Jawaban: **500358**
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
- <br><img width="1070" height="524" alt="image" src="https://github.com/user-attachments/assets/3a7eaec1-0fca-47e2-9e76-e07bf1dbc2c5" />
+
 
  
 ### What are the user that successfully logged in?
@@ -346,8 +346,8 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   frame contains "successful"
   ```
   <br>Filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil login. Cara melihat datanya ialah dengan klik kanan packet, lalu pilih follow->tcp stream.
-  <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
-
+ <br><img width="535" height="262" alt="image" src="https://github.com/user-attachments/assets/3a7eaec1-0fca-47e2-9e76-e07bf1dbc2c5" />
+  <br><img width="504" height="309" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
   
 ### In which stream were the credentials found?
   Jawaban: **41824**
@@ -356,7 +356,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   tcp.stream eq 41824
   ```
   <br>Menandakan lokasi stream dimana kredensial ditemukan: 41824
-  <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
+
 
 ### What tools are used for brute force?
   Jawaban: **Fuzz Faster U Fool v2.1.0-dev**
