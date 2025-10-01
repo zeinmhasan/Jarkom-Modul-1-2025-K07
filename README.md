@@ -361,7 +361,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   <br>Tools biasanya tertera pada User-Agent di kredensial tadi, kebetulan User-Agent juga sesuai dengan format jawaban yang diminta soal.
   <br><img width="504" height="309" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
-### Screenshot Pengerjaan di Terminal
+### Screenshot Pengerjaan
 <img width="1019" height="530" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
 
@@ -481,7 +481,7 @@ if __name__ == "__main__":
 
 
 
-#### Screenshot Pengerjaan di Terminal
+#### Screenshot Pengerjaan
 <img width="1096" height="443" alt="image" src="https://github.com/user-attachments/assets/5276d755-a6a8-4bd0-8a45-77576cbef6dc" />
 
 ## Soal 16
@@ -497,7 +497,7 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
   <br>Karena malware erat hubungannya dengan aplikasi, maka saya coba menghitung jumlah string dengan ekstensi ".exe". Total ada 5 dengan detail: q, w, e, r, t.exe.
   <br><img width="570" height="539" alt="image" src="https://github.com/user-attachments/assets/8742821b-6ae9-4abb-823c-0fe669d4b4b6" />
 
-#### Format C-H Kurang Lebih Sama
+### Format C-H Kurang Lebih Sama
 - Langkah yang dapat dilakukan ialah mencari packet dengan info "huruf.exe".
 - Cari packet dengan data lenght terbesar, lalu Follow TCP Stream.
 - Ubah format data dari ASCII menjadi **Raw**.
@@ -507,12 +507,33 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
   sha256sum nama_file
   ```
 - File sudah terdecrypt yeyy.
+  <img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/2c6a825f-b910-43d4-8cca-9324dd2f0da2" />
+<img width="500" height="27" alt="image" src="https://github.com/user-attachments/assets/58c46155-2fd1-4fde-8a22-6dfd4972604b" />
 
 #### C. What is the hash of the first file (q.exe)?
   Jawaban: **ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd**
-  <br>Langkah yang dapat dilakukan ialah mencari packet dengan info "huruf.exe". 
+  <br>Menggunakan langkah tadi.
+
+#### D. What is the hash of the second file (w.exe)?
+  Jawaban: **08eb941447078ef2c6ad8d91bb2f52256c09657ecd3d5344023edccf7291e9fc**
+
+#### E. What is the hash of the third file (e.exe)?
+  Jawaban: **32e1b3732cd779af1bf7730d0ec8a7a87a084319f6a0870dc7362a15ddbd3199**
+  <br>Menggunakan langkah tadi.
+
+#### F. What is the hash of the fourth file (r.exe)?
+  Jawaban: **4ebd58007ee933a0a8348aee2922904a7110b7fb6a316b1c7fb2c6677e613884**
+  <br>Menggunakan langkah tadi.
+
+#### G. What is the hash of the fifth file (t.exe)?
+  Jawaban: **10ce4b79180a2ddd924fdc95951d968191af2ee3b7dfc96dd6a5714dbeae613a**
+  <br>Menggunakan langkah tadi.
+
+#### Screenshot Pengerjaan
+<img width="1156" height="808" alt="image" src="https://github.com/user-attachments/assets/4aa90764-cab8-48b0-8981-8e4ab976578a" />
 
 
+## Soal 17
 
 
   
