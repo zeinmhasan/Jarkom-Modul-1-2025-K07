@@ -334,22 +334,26 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 (link file) nc 10.15.43.32 3401
 
 - How many packets are recorded in the pcapng file?
-  <br>Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
+  <br>Jawaban: <strong>500358<strong>
+  <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
  <br><img width="896" height="249" alt="image" src="https://github.com/user-attachments/assets/4e9445c7-00bb-4c97-b259-cb592c15aaf0" />
 
 - What are the user that successfully logged in?
-  <br> Dengan menggunakan filter, saring packet dengan:
+  <br>Jawaban: strong>n1enna:y4v4nn4_k3m3nt4r1<strong>
+  <br>How: Dengan menggunakan filter, saring packet dengan:
   ```
   frame contains "successful"
   ```
   <br>Filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil login. Cara melihat datanya ialah dengan klik kanan packet, lalu pilih follow->tcp stream.
   <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 - In which stream were the credentials found?
+- <br>Jawaban: <strong>41824<strong>
   <br>Setelah follow tcp stream di packet tadi, filter akan otomatis berubah menjadi:
   ```
   tcp.stream eq 41824
   ```
   <br>Menandakan lokasi stream dimana kredensial ditemukan: <strong>41824<strong>
+  <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
 <img width="1019" height="530" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
