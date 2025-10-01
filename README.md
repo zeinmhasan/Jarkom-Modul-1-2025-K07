@@ -325,7 +325,7 @@ done
 nanti hasilnya akan seperti ini :
 <img width="832" height="231" alt="Image" src="https://github.com/user-attachments/assets/d6a8d422-fbb9-4d52-bb79-bb8a8a41b95e" />
 
-## Untuk SOAL 14-20 Langkah Setup-nya Sama
+# Untuk SOAL 14-20 Langkah Setup-nya Sama
 - Setup decoder: Buka terminal, jalankan nc 10.15.43.32 <port_sesuai_soal>.
 - Setup wireshark: Download file soal, unzip, lalu buka file dengan wireshark.
 
@@ -335,7 +335,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 #### A. How many packets are recorded in the pcapng file?
   Jawaban: **500358**
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
-<br><img width="976/2" height="408/2" alt="image" src="https://github.com/user-attachments/assets/62aa579c-5819-4fb3-b732-992e1f7d88d3" />
+<br><img width="486" height="204" alt="image" src="https://github.com/user-attachments/assets/62aa579c-5819-4fb3-b732-992e1f7d88d3" />
  
 ### B. What are the user that successfully logged in?
   Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
@@ -362,7 +362,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   <br><img width="504" height="309" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
 ### Screenshot Pengerjaan
-<img width="1019" height="530" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
+<img width="508" height="265" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
 
 ## Soal 15
@@ -482,7 +482,7 @@ if __name__ == "__main__":
 
 
 #### Screenshot Pengerjaan
-<img width="1096" height="443" alt="image" src="https://github.com/user-attachments/assets/5276d755-a6a8-4bd0-8a45-77576cbef6dc" />
+<img width="548" height="221" alt="image" src="https://github.com/user-attachments/assets/5276d755-a6a8-4bd0-8a45-77576cbef6dc" />
 
 ## Soal 16
 Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari file capture yang ada, identifikasi file apa yang diletakkan oleh Melkor. (link file) nc 10.15.43.32 3403
@@ -490,7 +490,7 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
 #### A. What credential did the attacker use to log in?
   Jawaban: **ind@psg420.com:{6r_6e#TfT1p**
   <br>Seperti mencari kredensial di nomor 14, saya coba cari packet dengan protokol TCP. Saya menemukan 1 packet dengan warna merah yang ternyata memiliki kredensial tersebut. Saya menemukan 2 packet warna merah lain namun isinya tidak menjawab permintaan soal. Cara ceknya dengan Follow TCP Stream.
-  <img width="1064" height="458" alt="image" src="https://github.com/user-attachments/assets/8a21fb5d-0069-4d58-a82c-bfccd56af786" />
+  <img width="532" height="229" alt="image" src="https://github.com/user-attachments/assets/8a21fb5d-0069-4d58-a82c-bfccd56af786" />
 
 #### B. How many files are suspected of containing malware?
   Jawaban: **5**
@@ -530,24 +530,71 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
   <br>Menggunakan langkah tadi.
 
 #### Screenshot Pengerjaan
-<img width="1156" height="808" alt="image" src="https://github.com/user-attachments/assets/4aa90764-cab8-48b0-8981-8e4ab976578a" />
+<img width="550" height="404" alt="image" src="https://github.com/user-attachments/assets/4aa90764-cab8-48b0-8981-8e4ab976578a" />
 
 ## Soal 17
 Manwe membuat halaman web di node-nya yang menampilkan gambar cincin agung. Melkor yang melihat web tersebut merasa iri sehingga ia meletakkan file berbahaya agar web tersebut dapat dianggap menyebarkan malware oleh Eru. Analisis file capture untuk menggagalkan rencana Melkor dan menyelamatkan web Manwe. (link file) nc 10.15.43.32 3404
 
 #### A. What is the name of the first suspicious file?
-<img width="1294" height="423" alt="image" src="https://github.com/user-attachments/assets/74fabf44-2420-48a9-83cf-15cb6728e42c" />
-
-<img width="1136" height="861" alt="image" src="https://github.com/user-attachments/assets/e99e3bad-202b-4589-a22a-c4a1ecce2d7a" />
+  Jawaban: **Invoice&MSO-Request.doc**
+  <br> Karena malware ditaruh di web, maka dicari packet dengan protokol HTTP. Terdapat 3 file dengan ekstensi, akhirnya saya coba satu-satu.
+  <br><img width="690" height="210" alt="image" src="https://github.com/user-attachments/assets/74fabf44-2420-48a9-83cf-15cb6728e42c" />
 
 #### B. What is the name of the second suspicious file?
+  Jawaban: **knr.exe**
+  <br>Masih coba-coba kaya tadi.
+  <br><img width="640" height="210" alt="image" src="https://github.com/user-attachments/assets/74fabf44-2420-48a9-83cf-15cb6728e42c" />
 
 #### C. What is the hash of the second suspicious file (knr.exe)?
+  Jawaban: **749e161661290e8a2d190b1a66469744127bc25bf46e5d0c6f2e835f4b92db18**
+  <br>Awalnya saya coba menggunakan cara nomor 16 tadi, dengan [Klik kanan packet -> Follow TCP & HTTP -> Save as -> sha256sum]
+  <br><img width="550" height="190" alt="image" src="https://github.com/user-attachments/assets/0cd91e3f-b90e-4707-90cc-c96506efdb2a" />
+  <br>Namun tidak tahu mengapa decodenya salah terus. Akhirnya saya coba cari fitur lain, dan menemukan fitur [File->Export Object->HTTP...]
+  <br>Setelahnya dilakukan cara sha256 tadi.
+  <br><img width="650" height="400" alt="image" src="https://github.com/user-attachments/assets/78c79ebd-7017-4e39-9539-c38ef18b98aa" />
 
+#### Screenshot Pengerjaan
+<img width="225" height="215" alt="image" src="https://github.com/user-attachments/assets/e99e3bad-202b-4589-a22a-c4a1ecce2d7a" />
 
 ## Soal 18
+Karena rencana Melkor yang terus gagal, ia akhirnya berhenti sejenak untuk berpikir. Pada saat berpikir ia akhirnya memutuskan untuk membuat rencana jahat lainnya dengan meletakkan file berbahaya lagi tetapi dengan metode yang berbeda. Gagalkan lagi rencana Melkor dengan mengidentifikasi file capture yang disediakan agar dunia tetap aman. (link file) nc 10.15.43.32 3405
 
+#### A. How many files are suspected of containing malware?
+  Jawaban: **2**
+  <br>Ditemukan 2 nama file yang kemungkinan adalah malware dengan menggunakan filter:
+  ```
+frame contain ".exe"
+```
+  <br><img width="920" height="120" alt="image" src="https://github.com/user-attachments/assets/d27301f7-a8f2-4323-abd3-81fa437563ff" />
+  <br>(di packet TCP juga tertera file "d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe")
 
-#### A. 
+#### B. What is the name of the first malicious file?
+  Jawaban: **d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe**
+  <br>Dengan menyelami packet, didapati nama filenya
+  <br><img width="505" height="355" alt="image" src="https://github.com/user-attachments/assets/6dec71fe-3f44-4b5a-88b0-ec31d259cdd0" />
+
+#### C. Apa nama file berbahaya yang kedua?
+  Jawaban: **oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe**
+  <br>Dengan menyelami packet, didapati nama filenya
+  <br><img width="505" height="350" alt="image" src="https://github.com/user-attachments/assets/5487605c-196f-4b07-b3de-590350685fed" />
+
+#### D. What is the hash of the first malicious file?
+  Jawaban: **59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040**
+  <br>Setelah mencoba menyimpan packet dengan format raw text dan salah (bukan jawaban benar), saya coba menggunakan cara Export Object seperti sebelumnya. Karena protocol yang digunakan packet ialah SMB, maka saya lakukan [File->Export Object->SMB->Save]
+  <br><img width="480" height="365" alt="image" src="https://github.com/user-attachments/assets/2cc300c1-ea6d-4908-a7b2-233881f94308" />
+  <br>Kemudian decrypt dengan sha256.
+  <br><img width="504" height="90" alt="image" src="https://github.com/user-attachments/assets/9496b151-2ae7-45b0-ab81-73d10b309c67" />
+
+#### E. What is the hash of the second malicious file?
+  Jawaban: **cf99990bee6c378cbf56239b3cc88276eec348d82740f84e9d5c343751f82560**
+  <br>Seperti poin D. Setelah mencoba menyimpan packet dengan format raw text dan salah (bukan jawaban benar), saya coba menggunakan cara Export Object seperti sebelumnya. Karena protocol yang digunakan packet ialah SMB, maka saya lakukan [File->Export Object->SMB->Save]
+  <br><img width="480" height="365" alt="image" src="https://github.com/user-attachments/assets/2cc300c1-ea6d-4908-a7b2-233881f94308" />
+  <br>Kemudian decrypt dengan sha256.
+  <br><img width="504" height="90" alt="image" src="https://github.com/user-attachments/assets/9496b151-2ae7-45b0-ab81-73d10b309c67" />
+
+#### Bukti Screenshot
+<img width="560" height="365" alt="image" src="https://github.com/user-attachments/assets/633d068e-c414-4293-a8c6-8b1257ec1f3b" />
+
+## Soal 19
 
   
