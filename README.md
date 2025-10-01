@@ -334,7 +334,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 (link file) nc 10.15.43.32 3401
 
 - How many packets are recorded in the pcapng file?
-  Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx.
+  <br> Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx.
 - What are the user that successfully logged in?
   Dengan menggunakan filter, saring packet dengan:
   ```
