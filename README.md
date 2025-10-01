@@ -325,6 +325,23 @@ done
 nanti hasilnya akan seperti ini :
 <img width="832" height="231" alt="Image" src="https://github.com/user-attachments/assets/d6a8d422-fbb9-4d52-bb79-bb8a8a41b95e" />
 
+## Untuk SOAL 14-20 Langkah Setup-nya Sama
+- Setup decoder: Buka terminal, jalankan nc 10.15.43.32 <port>.
+- Setup wireshark: Download file soal, unzip, lalu buka file dengan wireshark.
 
+## SOAL 14
+Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. 
+(link file) nc 10.15.43.32 3401
+
+- How many packets are recorded in the pcapng file?
+  Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx.
+- What are the user that successfully logged in?
+  Dengan menggunakan filter, saring packet dengan:
+  ```
+  frame contains "successful"
+  ```
+  filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil log in.
+
+<img width="1019" height="530" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
 
