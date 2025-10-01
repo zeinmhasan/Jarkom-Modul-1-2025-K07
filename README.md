@@ -375,8 +375,7 @@ Melkor menyusup ke ruang server dan memasang keyboard USB berbahaya pada node Ma
 
 #### B. What did Melkor write?
   Jawaban: **UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=**
-  <br>Seperti mencari kredensial di nomor 14, saya coba cari packet dengan protokol TCP. Saya menemukan 1 packet dengan warna merah yang ternyata memiliki kredensial tersebut. Saya menemukan 2 packet warna merah lain namun isinya tidak menjawab permintaan soal. Cara ceknya dengan Follow TCP Stream.
-  <img width="1064" height="458" alt="image" src="https://github.com/user-attachments/assets/8a21fb5d-0069-4d58-a82c-bfccd56af786" />
+
 
 #### C. What is Melkor's secret message?
   Jawaban: **Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd**
@@ -393,7 +392,8 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
 
 #### A. What credential did the attacker use to log in?
   Jawaban: **ind@psg420.com:{6r_6e#TfT1p**
-  <br>
+  <br>Seperti mencari kredensial di nomor 14, saya coba cari packet dengan protokol TCP. Saya menemukan 1 packet dengan warna merah yang ternyata memiliki kredensial tersebut. Saya menemukan 2 packet warna merah lain namun isinya tidak menjawab permintaan soal. Cara ceknya dengan Follow TCP Stream.
+  <img width="1064" height="458" alt="image" src="https://github.com/user-attachments/assets/8a21fb5d-0069-4d58-a82c-bfccd56af786" />
 
 
 
