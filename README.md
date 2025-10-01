@@ -333,13 +333,13 @@ nanti hasilnya akan seperti ini :
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. 
 (link file) nc 10.15.43.32 3401
 
-- How many packets are recorded in the pcapng file?
+### **How many packets are recorded in the pcapng file?**
   <br>Jawaban: **500358**
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
  <br><img width="1070" height="524" alt="image" src="https://github.com/user-attachments/assets/3a7eaec1-0fca-47e2-9e76-e07bf1dbc2c5" />
 
  
-- What are the user that successfully logged in?
+- **What are the user that successfully logged in?**
   <br>Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
   <br>How: Dengan menggunakan filter, saring packet dengan:
   ```
@@ -349,7 +349,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
   
-- In which stream were the credentials found?
+- **In which stream were the credentials found?**
   <br>Jawaban: **41824**
   <br>Setelah follow tcp stream di packet tadi, filter akan otomatis berubah menjadi:
   ```
