@@ -339,7 +339,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
  <br><img width="896" height="249" alt="image" src="https://github.com/user-attachments/assets/4e9445c7-00bb-4c97-b259-cb592c15aaf0" />
 
 - What are the user that successfully logged in?
-  <br>Jawaban: strong>n1enna:y4v4nn4_k3m3nt4r1<strong>
+  <br>Jawaban: <strong>n1enna:y4v4nn4_k3m3nt4r1<strong>
   <br>How: Dengan menggunakan filter, saring packet dengan:
   ```
   frame contains "successful"
