@@ -340,9 +340,9 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 ### B. What are the user that successfully logged in?
   - Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
   <br>How: Dengan menggunakan filter, saring packet dengan:
-  ```
-  frame contains "successful"
-  ```
+    ```
+    frame contains "successful"
+    ```
   <br>Filter akan menampilkan packet dengan isi kata "successful" yang merujuk pada packet dengan data user yang berhasil login. Cara melihat datanya ialah dengan klik kanan packet, lalu pilih Follow->TCP Stream.
  <br><img width="535" height="262" alt="image" src="https://github.com/user-attachments/assets/3a7eaec1-0fca-47e2-9e76-e07bf1dbc2c5" />
 <img width="470" height="285" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
@@ -350,9 +350,9 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 ### C. In which stream were the credentials found?
   - Jawaban: **41824**
   <br>Setelah Follow TCP Stream di packet tadi, filter akan otomatis berubah menjadi:
-  ```
-  tcp.stream eq 41824
-  ```
+    ```
+    tcp.stream eq 41824
+    ```
   <br>Menandakan lokasi stream dimana kredensial ditemukan: 41824
 
 
@@ -374,7 +374,7 @@ Melkor menyusup ke ruang server dan memasang keyboard USB berbahaya pada node Ma
   <br><img width="765" height="306" alt="image" src="https://github.com/user-attachments/assets/e87ba9c9-90a6-4b44-bc71-3d61730ab195" />
 
 #### B. What did Melkor write?
-  Jawaban: **UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=**
+  - Jawaban: **UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=**
   <br>Karena di packet-packet mengandung string dengan format HID, maka bisa kita lakukan Export Packet Dissections As Plain Text.
   <br><img width="390" height="280" alt="image" src="https://github.com/user-attachments/assets/fca5cb46-f7a5-4579-be27-f0e6eff63236" />
   <br>Kemudian dapat kita decode menggunakan script decoder:
@@ -475,7 +475,7 @@ if __name__ == "__main__":
   <br>Script dapat dijalankan dan menghasilkan: UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=
 
 #### C. What is Melkor's secret message?
-  Jawaban: **Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd**
+  - Jawaban: **Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd**
   <br>String "UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=" dapat didecode menggunakan cyberchef, menghasilkan: Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd
   <br><img width="511" height="199" alt="image" src="https://github.com/user-attachments/assets/91640210-c375-4600-a207-de2a5b642d4a" />
 
@@ -488,12 +488,12 @@ if __name__ == "__main__":
 Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari file capture yang ada, identifikasi file apa yang diletakkan oleh Melkor. (link file) nc 10.15.43.32 3403
 
 #### A. What credential did the attacker use to log in?
-  Jawaban: **ind@psg420.com:{6r_6e#TfT1p**
+  - Jawaban: **ind@psg420.com:{6r_6e#TfT1p**
   <br>Seperti mencari kredensial di nomor 14, saya coba cari packet dengan protokol TCP. Saya menemukan 1 packet dengan warna merah yang ternyata memiliki kredensial tersebut. Saya menemukan 2 packet warna merah lain namun isinya tidak menjawab permintaan soal. Cara ceknya dengan Follow TCP Stream.
   <img width="532" height="229" alt="image" src="https://github.com/user-attachments/assets/8a21fb5d-0069-4d58-a82c-bfccd56af786" />
 
 #### B. How many files are suspected of containing malware?
-  Jawaban: **5**
+  - Jawaban: **5**
   <br>Karena malware erat hubungannya dengan aplikasi, maka saya coba menghitung jumlah string dengan ekstensi ".exe". Total ada 5 dengan detail: q, w, e, r, t.exe.
   <br><img width="570" height="539" alt="image" src="https://github.com/user-attachments/assets/8742821b-6ae9-4abb-823c-0fe669d4b4b6" />
 
@@ -511,22 +511,22 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
 <img width="500" height="27" alt="image" src="https://github.com/user-attachments/assets/58c46155-2fd1-4fde-8a22-6dfd4972604b" />
 
 #### C. What is the hash of the first file (q.exe)?
-  Jawaban: **ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd**
+  - Jawaban: **ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd**
   <br>Menggunakan langkah tadi.
 
 #### D. What is the hash of the second file (w.exe)?
-  Jawaban: **08eb941447078ef2c6ad8d91bb2f52256c09657ecd3d5344023edccf7291e9fc**
+  - Jawaban: **08eb941447078ef2c6ad8d91bb2f52256c09657ecd3d5344023edccf7291e9fc**
 
 #### E. What is the hash of the third file (e.exe)?
-  Jawaban: **32e1b3732cd779af1bf7730d0ec8a7a87a084319f6a0870dc7362a15ddbd3199**
+  - Jawaban: **32e1b3732cd779af1bf7730d0ec8a7a87a084319f6a0870dc7362a15ddbd3199**
   <br>Menggunakan langkah tadi.
 
 #### F. What is the hash of the fourth file (r.exe)?
-  Jawaban: **4ebd58007ee933a0a8348aee2922904a7110b7fb6a316b1c7fb2c6677e613884**
+  - Jawaban: **4ebd58007ee933a0a8348aee2922904a7110b7fb6a316b1c7fb2c6677e613884**
   <br>Menggunakan langkah tadi.
 
 #### G. What is the hash of the fifth file (t.exe)?
-  Jawaban: **10ce4b79180a2ddd924fdc95951d968191af2ee3b7dfc96dd6a5714dbeae613a**
+  - Jawaban: **10ce4b79180a2ddd924fdc95951d968191af2ee3b7dfc96dd6a5714dbeae613a**
   <br>Menggunakan langkah tadi.
 
 #### Screenshot Pengerjaan
@@ -536,17 +536,17 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
 Manwe membuat halaman web di node-nya yang menampilkan gambar cincin agung. Melkor yang melihat web tersebut merasa iri sehingga ia meletakkan file berbahaya agar web tersebut dapat dianggap menyebarkan malware oleh Eru. Analisis file capture untuk menggagalkan rencana Melkor dan menyelamatkan web Manwe. (link file) nc 10.15.43.32 3404
 
 #### A. What is the name of the first suspicious file?
-  Jawaban: **Invoice&MSO-Request.doc**
+  - Jawaban: **Invoice&MSO-Request.doc**
   <br> Karena malware ditaruh di web, maka dicari packet dengan protokol HTTP. Terdapat 3 file dengan ekstensi, akhirnya saya coba satu-satu.
   <br><img width="690" height="210" alt="image" src="https://github.com/user-attachments/assets/74fabf44-2420-48a9-83cf-15cb6728e42c" />
 
 #### B. What is the name of the second suspicious file?
-  Jawaban: **knr.exe**
+  - Jawaban: **knr.exe**
   <br>Masih coba-coba kaya tadi.
   <br><img width="640" height="210" alt="image" src="https://github.com/user-attachments/assets/74fabf44-2420-48a9-83cf-15cb6728e42c" />
 
 #### C. What is the hash of the second suspicious file (knr.exe)?
-  Jawaban: **749e161661290e8a2d190b1a66469744127bc25bf46e5d0c6f2e835f4b92db18**
+  - Jawaban: **749e161661290e8a2d190b1a66469744127bc25bf46e5d0c6f2e835f4b92db18**
   <br>Awalnya saya coba menggunakan cara nomor 16 tadi, dengan [Klik kanan packet -> Follow TCP & HTTP -> Save as -> sha256sum]
   <br><img width="550" height="190" alt="image" src="https://github.com/user-attachments/assets/0cd91e3f-b90e-4707-90cc-c96506efdb2a" />
   <br>Namun tidak tahu mengapa decodenya salah terus. Akhirnya saya coba cari fitur lain, dan menemukan fitur [File->Export Object->HTTP...]
@@ -560,33 +560,33 @@ Manwe membuat halaman web di node-nya yang menampilkan gambar cincin agung. Melk
 Karena rencana Melkor yang terus gagal, ia akhirnya berhenti sejenak untuk berpikir. Pada saat berpikir ia akhirnya memutuskan untuk membuat rencana jahat lainnya dengan meletakkan file berbahaya lagi tetapi dengan metode yang berbeda. Gagalkan lagi rencana Melkor dengan mengidentifikasi file capture yang disediakan agar dunia tetap aman. (link file) nc 10.15.43.32 3405
 
 #### A. How many files are suspected of containing malware?
-  Jawaban: **2**
+  - Jawaban: **2**
   <br>Ditemukan 2 nama file yang kemungkinan adalah malware dengan menggunakan filter:
   ```
-frame contain ".exe"
-```
+  frame contain ".exe"
+  ```
   <br><img width="920" height="120" alt="image" src="https://github.com/user-attachments/assets/d27301f7-a8f2-4323-abd3-81fa437563ff" />
   <br>(di packet TCP juga tertera file "d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe")
 
 #### B. What is the name of the first malicious file?
-  Jawaban: **d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe**
+  - Jawaban: **d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe**
   <br>Dengan menyelami packet, didapati nama filenya
   <br><img width="505" height="355" alt="image" src="https://github.com/user-attachments/assets/6dec71fe-3f44-4b5a-88b0-ec31d259cdd0" />
 
 #### C. Apa nama file berbahaya yang kedua?
-  Jawaban: **oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe**
+  - Jawaban: **oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe**
   <br>Dengan menyelami packet, didapati nama filenya
   <br><img width="505" height="350" alt="image" src="https://github.com/user-attachments/assets/5487605c-196f-4b07-b3de-590350685fed" />
 
 #### D. What is the hash of the first malicious file?
-  Jawaban: **59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040**
+  - Jawaban: **59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040**
   <br>Setelah mencoba menyimpan packet dengan format raw text dan salah (bukan jawaban benar), saya coba menggunakan cara Export Object seperti sebelumnya. Karena protocol yang digunakan packet ialah SMB, maka saya lakukan [File->Export Object->SMB->Save]
   <br><img width="480" height="365" alt="image" src="https://github.com/user-attachments/assets/2cc300c1-ea6d-4908-a7b2-233881f94308" />
   <br>Kemudian decrypt dengan sha256.
   <br><img width="504" height="90" alt="image" src="https://github.com/user-attachments/assets/9496b151-2ae7-45b0-ab81-73d10b309c67" />
 
 #### E. What is the hash of the second malicious file?
-  Jawaban: **cf99990bee6c378cbf56239b3cc88276eec348d82740f84e9d5c343751f82560**
+  - Jawaban: **cf99990bee6c378cbf56239b3cc88276eec348d82740f84e9d5c343751f82560**
   <br>Seperti poin D. Setelah mencoba menyimpan packet dengan format raw text dan salah (bukan jawaban benar), saya coba menggunakan cara Export Object seperti sebelumnya. Karena protocol yang digunakan packet ialah SMB, maka saya lakukan [File->Export Object->SMB->Save]
   <br><img width="480" height="365" alt="image" src="https://github.com/user-attachments/assets/2cc300c1-ea6d-4908-a7b2-233881f94308" />
   <br>Kemudian decrypt dengan sha256.
@@ -596,5 +596,6 @@ frame contain ".exe"
 <img width="560" height="365" alt="image" src="https://github.com/user-attachments/assets/633d068e-c414-4293-a8c6-8b1257ec1f3b" />
 
 ## Soal 19
+Manwe mengirimkan email berisi surat cinta kepada Varda melalui koneksi yang tidak terenkripsi. Melihat hal itu Melkor sipaling jahat langsung melancarkan aksinya yaitu meneror Varda dengan email yang disamarkan. Analisis file capture jaringan dan gagalkan lagi rencana busuk Melkor. (link file) nc 10.15.43.32 3406
 
-  
+#### A. 
