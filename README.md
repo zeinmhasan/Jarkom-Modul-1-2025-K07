@@ -492,6 +492,27 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
   <br>Seperti mencari kredensial di nomor 14, saya coba cari packet dengan protokol TCP. Saya menemukan 1 packet dengan warna merah yang ternyata memiliki kredensial tersebut. Saya menemukan 2 packet warna merah lain namun isinya tidak menjawab permintaan soal. Cara ceknya dengan Follow TCP Stream.
   <img width="1064" height="458" alt="image" src="https://github.com/user-attachments/assets/8a21fb5d-0069-4d58-a82c-bfccd56af786" />
 
+#### B. How many files are suspected of containing malware?
+  Jawaban: **5**
+  <br>Karena malware erat hubungannya dengan aplikasi, maka saya coba menghitung jumlah string dengan ekstensi ".exe". Total ada 5 dengan detail: q, w, e, r, t.exe.
+  <br><img width="570" height="539" alt="image" src="https://github.com/user-attachments/assets/8742821b-6ae9-4abb-823c-0fe669d4b4b6" />
+
+#### Format C-H Kurang Lebih Sama
+- Langkah yang dapat dilakukan ialah mencari packet dengan info "huruf.exe".
+- Cari packet dengan data lenght terbesar, lalu Follow TCP Stream.
+- Ubah format data dari ASCII menjadi **Raw**.
+- Save file as "all files" (tanpa ekstensi).
+- Lalu decode file menggunakan **sha256**, seperti:
+  ```
+  sha256sum nama_file
+  ```
+- File sudah terdecrypt yeyy.
+
+#### C. What is the hash of the first file (q.exe)?
+  Jawaban: **ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd**
+  <br>Langkah yang dapat dilakukan ialah mencari packet dengan info "huruf.exe". 
+
+
 
 
   
