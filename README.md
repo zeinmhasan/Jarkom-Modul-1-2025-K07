@@ -334,12 +334,12 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 (link file) nc 10.15.43.32 3401
 
 ### **How many packets are recorded in the pcapng file?**
-  <br>Jawaban: **500358**
+  Jawaban: **500358**
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
  <br><img width="1070" height="524" alt="image" src="https://github.com/user-attachments/assets/3a7eaec1-0fca-47e2-9e76-e07bf1dbc2c5" />
 
  
-- **What are the user that successfully logged in?**
+### **What are the user that successfully logged in?**
   <br>Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
   <br>How: Dengan menggunakan filter, saring packet dengan:
   ```
@@ -349,7 +349,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
   
-- **In which stream were the credentials found?**
+### **In which stream were the credentials found?**
   <br>Jawaban: **41824**
   <br>Setelah follow tcp stream di packet tadi, filter akan otomatis berubah menjadi:
   ```
@@ -358,11 +358,12 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   <br>Menandakan lokasi stream dimana kredensial ditemukan: 41824
   <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
-- What tools are used for brute force?
+### What tools are used for brute force?
   <br>Jawaban: **Fuzz Faster U Fool v2.1.0-dev**
   <br>Tools biasanya tertera pada User-Agent di kredensial tadi, kebetulan User-Agent juga sesuai dengan format jawaban yang diminta soal.
   <br><img width="1008" height="618" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
+### Screenshot Pengerjaan di Terminal
 <img width="1019" height="530" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
 
