@@ -336,8 +336,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
 #### How many packets are recorded in the pcapng file?
   Jawaban: **500358**
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
-
-
+<br><img width="976/2" height="408/2" alt="image" src="https://github.com/user-attachments/assets/62aa579c-5819-4fb3-b732-992e1f7d88d3" />
  
 ### What are the user that successfully logged in?
   Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
