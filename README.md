@@ -285,6 +285,32 @@ ping -c 100 -i 0.1 10.67.1.1
 trus pantau dari wireshark 
 <img width="1919" height="1018" alt="Image" src="https://github.com/user-attachments/assets/cbb13160-d933-4edd-bbee-4434d3d12494" />
 
+## SOAL 11 
+Sebelum era koneksi aman, Eru sering menyelinap masuk ke wilayah Melkor. Eru perlu masuk ke node tersebut untuk memeriksa konfigurasi, namun ia tahu Melkor mungkin sedang memantau jaringan. Buktikan kelemahan protokol Telnet dengan membuat akun dan password baru di node Melkor kemudian menangkap sesi login Eru ke node Melkor menggunakan Wireshark. Tunjukkan bagaimana username dan password dapat terlihat sebagai plain text. 
+
+Di malkor buat user dulu :
+```
+adduser zein
+```
+Setelah itu download :
+```
+apt-get update
+apt-get install -y inetutils-inetd inetutils-telnetd
+```
+
+tulis konfigurasi atau bisa edit manual di /etc/inetd.conf :
+```
+echo "telnet  stream  tcp     nowait  root    /usr/sbin/in.telnetd  in.telnetd" >> /etc/inetd.conf
+```
+
+di eru tinggal jalankan telnet nya :
+```
+di eru 
+telnet 10.67.1.2
+```
+<img width="1919" height="1026" alt="Image" src="https://github.com/user-attachments/assets/f2f46f08-76a7-4c0b-824c-03d0162843a2" />
+
+
 ## SOAL 12
 Eru mencurigai Melkor menjalankan beberapa layanan terlarang di node-nya. Lakukan pemindaian port sederhana dari node Eru ke node Melkor menggunakan Netcat (nc) untuk memeriksa port 21, 80, dalam keadaan terbuka dan port rahasia 666 dalam keadaan tertutup.
 
@@ -324,6 +350,36 @@ done
 ```
 nanti hasilnya akan seperti ini :
 <img width="832" height="231" alt="Image" src="https://github.com/user-attachments/assets/d6a8d422-fbb9-4d52-bb79-bb8a8a41b95e" />
+
+## SOAL 13
+Setelah insiden penyadapan Telnet, Eru memerintahkan semua koneksi administratif harus menggunakan SSH (Secure Shell) untuk mengamankan jaringan. Lakukan koneksi SSH dari node Varda ke Eru. Tangkap sesi tersebut menggunakan Wireshark. Analisis dan jelaskan mengapa username dan password tidak dapat dilihat seperti pada sesi Telnet. Tunjukkan paket-paket terenkripsi dalam hasil capture sebagai bukti keamanan SSH.
+
+pertama tama install dulu ygy :
+```
+apt-get update
+apt-get install -y openssh-server || true
+```
+
+bikin user :
+```
+adduser nanda
+```
+
+jalankan sshd :
+```
+/usr/sbin/sshd &
+```
+
+lalu di varda masuk ssh dengan :
+```
+ssh nanda@10.67.1.1
+```
+
+nanti pas di cek di wireshark akan seperti ini :
+
+<img width="1919" height="1079" alt="Image" src="https://github.com/user-attachments/assets/b0dd7c83-d006-403f-83d5-5251810dfe94" />
+
+
 
 # Untuk SOAL 14-20 Langkah Setup-nya Sama
 - Setup decoder: Buka terminal, jalankan nc 10.15.43.32 <port_sesuai_soal>.
