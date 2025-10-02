@@ -338,7 +338,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   <br>How: Dapat dilihat di bagian bawah kanan window wireshark, tertera -> Packets:xxx (jumlah packet).
 <br><img width="486" height="204" alt="image" src="https://github.com/user-attachments/assets/62aa579c-5819-4fb3-b732-992e1f7d88d3" />
  
-### B. What are the user that successfully logged in?
+#### B. What are the user that successfully logged in?
   - Jawaban: **n1enna:y4v4nn4_k3m3nt4r1**
   <br>How: Dengan menggunakan filter, saring packet dengan:
     ```
@@ -348,7 +348,7 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
  <br><img width="535" height="262" alt="image" src="https://github.com/user-attachments/assets/3a7eaec1-0fca-47e2-9e76-e07bf1dbc2c5" />
 <img width="470" height="285" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
   
-### C. In which stream were the credentials found?
+#### C. In which stream were the credentials found?
   - Jawaban: **41824**
   <br>Setelah Follow TCP Stream di packet tadi, filter akan otomatis berubah menjadi:
     ```
@@ -357,12 +357,12 @@ Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  M
   <br>Menandakan lokasi stream dimana kredensial ditemukan: 41824
 
 
-### D. What tools are used for brute force?
+#### D. What tools are used for brute force?
   - Jawaban: **Fuzz Faster U Fool v2.1.0-dev**
   <br>Tools biasanya tertera pada User-Agent di kredensial tadi, kebetulan User-Agent juga sesuai dengan format jawaban yang diminta soal.
   <br><img width="504" height="309" alt="image" src="https://github.com/user-attachments/assets/ced754f4-3f43-49b2-abce-6835e7bf1612" />
 
-### Screenshot Pengerjaan
+#### Screenshot Pengerjaan
 <img width="508" height="265" alt="image" src="https://github.com/user-attachments/assets/30017ed1-5389-48e7-aaa0-6ec556c818f9" />
 
 
@@ -630,10 +630,15 @@ Manwe mengirimkan email berisi surat cinta kepada Varda melalui koneksi yang tid
 
 ## Soal 20
 Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file berbahaya kemudian menyembunyikannya agar tidak terlihat oleh Eru. Tetapi Manwe yang sudah merasakan adanya niat jahat dari Melkor, ia menyisipkan bantuan untuk mengungkapkan rencana Melkor. Analisis file capture dan identifikasi kegunaan bantuan yang diberikan oleh Manwe untuk menggagalkan rencana jahat Melkor selamanya. (link file) nc 10.15.43.32 3407
-- 
+- Belum dapet fleg 
 
-#### A. 
-  Jawaban: ** **
+#### A. What encryption method is used?
+  Jawaban: **TLS**
+  <br>Setelah melihat-lihat packet, saya mendapati terdapat banyak packet yang memiliki info mengandung kata "Encrypted", ketika saya coba masukkan sebagai jawaban ternyata berhasil.
+  <br><img width="930" height="473" alt="image" src="https://github.com/user-attachments/assets/f3cf2054-3ea7-4321-9d75-120395c5ea41" />
+
+#### B. What is the name of the malicious file placed by the attacker?
+  Jawaban:** **
   <br>
   <br>
 
