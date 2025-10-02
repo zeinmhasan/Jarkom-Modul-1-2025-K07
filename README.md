@@ -633,12 +633,12 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 - Congratulations! Here is your flag: KOMJAR25{B3ware_0f_M4lw4re_dx9mqWMMlpBeNVdyBmxiXH3SQ}
 
 #### A. What encryption method is used?
-  Jawaban: **TLS**
+  - Jawaban: **TLS**
   <br>Setelah melihat-lihat packet, saya mendapati terdapat banyak packet yang memiliki info mengandung kata "Encrypted", ketika saya coba masukkan sebagai jawaban ternyata berhasil.
   <br><img width="930" height="473" alt="image" src="https://github.com/user-attachments/assets/f3cf2054-3ea7-4321-9d75-120395c5ea41" />
 
 #### B. What is the name of the malicious file placed by the attacker?
-  Jawaban:**invest_20.dll**
+  - Jawaban:**invest_20.dll**
   <br>Setelah menemukan banyak packet TSL dengan info Encrypted tadi, saya coba cari di google "how to export tls packet as object in wireshark" -> kemudian menemukan cara di:
   <br>"<href:https://wiki.wireshark.org/TLS>"
   <br>Mengikuti langkah setting Preferences dari situ, kemudian memasukkan "keyslogfile.txt" dari soal sebagai "(Pre)-Master-Secret log filename", banyak protocol di "MelkorPlan5" yang berubah.
@@ -646,7 +646,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
   <br><img width="825" height="446" alt="image" src="https://github.com/user-attachments/assets/bc362c27-0453-4168-8f32-9148b44a5e78" />
 
 #### C. What is the hash of the file containing the malware?
-  Jawaban: **31cf42b2a7c5c558f44cfc67684cc344c17d4946d3a1e0b2cecb8eb58173cb2f**
+  - Jawaban: **31cf42b2a7c5c558f44cfc67684cc344c17d4946d3a1e0b2cecb8eb58173cb2f**
     <br>Dengan melakukan Export Object HTTP (karena protocol packet tempat saya nemu invest_20.dll tadi ialah HTTP), kemudian save file dan melakukan sha256 seperti sebelum-sebelumnya.
     <br><img width="475" height="347" alt="image" src="https://github.com/user-attachments/assets/9a2daae3-3a29-4fba-ac98-bd760025e269" />
 
