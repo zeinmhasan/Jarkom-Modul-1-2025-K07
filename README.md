@@ -39,7 +39,7 @@
 ## SOAL 1
 Untuk mempersiapkan peperangan World War MMXXIV (Iya sebanyak itu), Sriwijaya membuat dua kotanya menjadi web server yaitu Tanjungkulai, dan Bedahulu, serta Sriwijaya sendiri akan menjadi DNS Master. Kemudian karena merasa terdesak, Majapahit memberikan bantuan dan menjadikan kerajaannya (Majapahit) menjadi DNS Slave.
 
-###Eru Config
+#### Eru Config
 ```
 auto eth0
 iface eth0 inet dhcp
@@ -57,7 +57,7 @@ iface eth2 inet static
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.67.0.0/16
 ```
 
-###Melkor Config
+#### Melkor Config
 ```
 auto eth0 
 iface eth0 inet static
@@ -66,7 +66,7 @@ iface eth0 inet static
          gateway 10.67.1.1
 ```
 
-###Manwe Config
+#### Manwe Config
 ```
 auto eth0 
 iface eth0 inet static
@@ -75,7 +75,7 @@ iface eth0 inet static
          gateway 10.67.1.1
 ```
 
-###Varda Config
+#### Varda Config
 ```
 auto eth0 
 iface eth0 inet static
@@ -84,7 +84,7 @@ iface eth0 inet static
          gateway 10.67.2.1
 ```
 
-###Ulmo Config
+#### Ulmo Config
 ```
 auto eth0 
 iface eth0 inet static
@@ -690,7 +690,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 
 #### A. What encryption method is used?
   - Jawaban: **TLS**
-  <br>Setelah melihat-lihat packet, saya mendapati terdapat banyak packet yang memiliki info mengandung kata "Encrypted", ketika saya coba masukkan sebagai jawaban ternyata berhasil.
+  <br>Setelah melihat-lihat packet, saya mendapati terdapat banyak packet yang memiliki info mengandung kata "Encrypted" dengan protokol TLSv1.2, ketika saya coba masukkan sebagai jawaban ternyata berhasil.
   <br><img width="930" height="473" alt="image" src="https://github.com/user-attachments/assets/f3cf2054-3ea7-4321-9d75-120395c5ea41" />
 
 #### B. What is the name of the malicious file placed by the attacker?
