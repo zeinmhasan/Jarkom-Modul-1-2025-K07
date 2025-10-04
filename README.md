@@ -163,7 +163,7 @@ pertama tama kita harus buat FTP service dulu di Eru
 install klo belum :
 ```
 apt update
-apt install inetutils-ftp -y
+apt install vsftpd -y
 ```
 lalu buat folder shared nya :
 ```
