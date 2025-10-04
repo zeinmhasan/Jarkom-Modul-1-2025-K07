@@ -7,9 +7,6 @@ adduser melkor
 chown ainur:ainur /srv/ftp/shared
 chmod 755 /srv/ftp
 chmod 770 /srv/ftp/shared
-mv /srv/ftp/shared /home/ainur/shared
-chown ainur:ainur /home/ainur/shared
-chmod 770 /home/ainur/shared
 
 nano /etc/vsftpd.conf
 local_enable=YES
