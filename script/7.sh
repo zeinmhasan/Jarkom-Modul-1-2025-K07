@@ -1,5 +1,5 @@
 apt update
-apt install inetutils-ftp -y
+apt install vsftpd -y
 mkdir -p /srv/ftp/shared
 chmod 777 /srv/ftp/shared
 adduser ainur
